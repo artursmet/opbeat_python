@@ -65,7 +65,7 @@ class DjangoClient(Client):
 
     def get_user_info(self, request):
         try:
-            if request.user.is_authenticated():
+            if request.user.is_authenticated:
                 user_info = {
                     'is_authenticated': True,
                     'id': request.user.pk,
